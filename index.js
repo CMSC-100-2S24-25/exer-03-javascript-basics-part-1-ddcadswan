@@ -19,7 +19,8 @@ function validatePassword(pass, retyped){
             return true;
         }
     } else {
-        console.log("ERROR: Password invalid. Try again.");
+        // console.log("ERROR: Password invalid. Try again.");
+        console.log("UPDATE: Passwords did not match");
         return false;
     }
     
@@ -69,10 +70,38 @@ function reversePassword(pass){
     return pass;
 }
 
+// Function to store password into an object
+function storePassword(name, pass, retyped){
+    const object = {}
+
+    //Set the name of the object
+    object.Name = name;
+    console.log("PROGRESS: Validating passwords...")
+    if (validatePassword(pass, retyped) == true){
+        pass = reversePassword(pass);
+        object.Newpassword = pass;
+    } else {
+        console.log("UPDATE: Using first input as new password...");
+        object.Newpassword = pass; // first given password
+    }
+
+    console.log(" ");
+    console.log("Displaying Object Properties...");
+    console.log("OBJECT PROPERTIES:");
+    console.log(object);
+    return object; // return the object
+}
+
 
 // Main Program
 
+// validatePassword("Hello1234", "Hello1234");
+// // Reverse Password
+// reversePassword("Hello1234");
+// Store password to an object
+// ABOVE COMMENTS ARE FOR TESTING
 
-validatePassword("Hello1234", "Hello1234");
-// Reverse Password
-reversePassword("Hello1234");
+// start and call of program exercise
+console.log("[=======Password Simulation Program=======]");
+storePassword("Dal Cadsawan", "Hello1234", "Hello1234");
+// NOTE: if you change the inputs to not match it will use first input as password for object
