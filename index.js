@@ -50,14 +50,29 @@ function checkPassword(input){
 }
 
 // Function for reversing password
-reversePassword(pass){
-    
+function reversePassword(pass){
+    pass = pass.split("");
+    let startIndex = 0;
+    let endIndex = pass.length - 1;
+
+    while (startIndex < endIndex) {
+        let temp = pass[startIndex];
+        pass[startIndex] = pass[endIndex];
+        pass[endIndex] = temp;
+        startIndex++;
+        endIndex--;
+    }
+
+    // Combine the array into a string again
+    pass = pass.join("");
+    console.log("UPDATE: Reversed password is", pass);
+    return pass;
 }
 
 
 // Main Program
 
 
-validatePassword("He34", "Hello1234");
+validatePassword("Hello1234", "Hello1234");
 // Reverse Password
 reversePassword("Hello1234");
