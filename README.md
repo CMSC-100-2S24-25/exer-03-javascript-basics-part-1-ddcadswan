@@ -1,1 +1,13 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/2EnW9dmo)
+# Week 3: JavaScript Basics
+
+**Name:** Dalton Ken D. Cadsawan <br/>
+**Section:** C-1L <br/>
+**Student number:** 2023 - 65888 <br/>
+
+## Description
+A JavaScript file that implements the following functions: 
+    1. A function for validating if two passwords match.
+    2. A function for reversing the password.
+    3. A function for storing the password to the object. 
+
+## Key Takeaways from this exercise
